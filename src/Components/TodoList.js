@@ -160,7 +160,7 @@ const TodoList = () => {
       <ToastContainer />
       <div className="todo-app">
         <h2>
-          <img src={todoImage} alt="todo-image" /> Todo List
+          <img src={todoImage} alt="todo-image" /> Gerenciador de Tarefas
         </h2>
         <div className="row">
           <i className="fas fa-list-check"></i>
@@ -168,7 +168,7 @@ const TodoList = () => {
             type="text"
             className="add-task"
             id="add"
-            placeholder="Add your todo"
+            placeholder="Adicione sua tarefa"
             autoFocus
             value={inputValue}
             onChange={handleInputChange}
@@ -181,10 +181,11 @@ const TodoList = () => {
         <div className="mid">
           <i className="fas fa-check-double"></i>
           <p id="complete-all" onClick={handleCompleteAll}>
-            Complete all tasks
+          Concluir todas as tarefas
+
           </p>
           <p id="clear-all" onClick={handleClearCompleted}>
-            Delete comp tasks
+            Edite ou exclua tarefa(s)
           </p>
         </div>
 
@@ -220,29 +221,29 @@ const TodoList = () => {
 
         <div className="filters">
           <div className="dropdown">
-            <button className="dropbtn">Filter</button>
+            <button className="dropbtn">Filtrar</button>
             <div className="dropdown-content">
               <a href="#" id="all" onClick={() => handleFilterChange('all')}>
-                All
+                Todas
               </a>
               <a href="#" id="rem" onClick={() => handleFilterChange('uncompleted')}>
-                Uncompleted
+                Incompletas
               </a>
               <a href="#" id="com" onClick={() => handleFilterChange('completed')}>
-                Completed
+                Completadas
               </a>
             </div>
           </div>
 
           <div className="completed-task">
             <p>
-              Completed: <span id="c-count">{tasks.filter((task) => task.completed).length}</span>
+              Completadas: <span id="c-count">{tasks.filter((task) => task.completed).length}</span>
             </p>
           </div>
           <div className="remaining-task">
             <p>
               <span id="total-tasks">
-                Total Tasks: <span id="tasks-counter">{tasks.length}</span>
+                Total Tarefas: <span id="tasks-counter">{tasks.length}</span>
               </span>
             </p>
           </div>
